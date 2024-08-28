@@ -1,0 +1,4 @@
+Intro
+The scripts to run the pipeline on raw files of the EPO and USPTO patents are provided. The pipeline uses existing models for reference extraction and field extraction. 
+For EPO patents use 'EPO-pipeline.py' script. For UsPTO patents published between 1990-2001 use 'pipeline-uspto-v3.py'. For USPTO patents published between 2002-2004 use 'uspto-v4.py'. 
+For USPTO patents published between 2005-2022 use 'pipeline-uspto-v1.py' script. 
