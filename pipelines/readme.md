@@ -16,4 +16,47 @@ saved_model_checkpoint_FE = '/Models/field-extraction-complete.model'  (Path to 
 USPTO_DB_PATH = '/USPTO-v3.db'  (Path to the sqlite database to store the extracted references)
 ```
 
-The scheme of the table for storing the extracted references is as follows: The name of the Table is ``````
+The scheme of the table for storing the extracted references is as follows: The name of the Table is ```uspto_table``` or ```epo_table```. 
+
+```
+CREATE TABLE "epo_table" (
+	"ID"	INTEGER,
+	"patent_id"	TEXT,
+	"reference"	TEXT,
+	"match_score"	INTEGER,
+	"matched_pub"	TEXT,
+	"author"	TEXT,
+	"source"	TEXT,
+	"year"	TEXT,
+	"title"	TEXT,
+	"page"	TEXT,
+	"volume"	TEXT,
+	"issue"	TEXT,
+	"no"	TEXT,
+	"identifier"	TEXT,
+	"DOI"	TEXT,
+	"WOS_ID"	TEXT,
+	PRIMARY KEY("ID")
+);
+```
+
+```
+CREATE TABLE "uspto_table" (
+	"ID"	INTEGER,
+	"patent_id"	TEXT,
+	"reference"	TEXT,
+	"match_score"	INTEGER,
+	"author"	TEXT,
+	"source"	TEXT,
+	"year"	TEXT,
+	"title"	TEXT,
+	"page"	TEXT,
+	"volume"	TEXT,
+	"issue"	TEXT,
+	"no"	TEXT,
+	"identifier"	TEXT,
+	"matched_pub"	TEXT,
+	"DOI"	TEXT,
+	"WOS_ID"	TEXT
+);
+```
